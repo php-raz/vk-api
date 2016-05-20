@@ -1,0 +1,68 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    min-width: 1130px;
+}
+
+.empty {
+    height: 50px;
+}
+
+.footer {
+    height: 50px;
+    margin-top: -50px;
+    position: relative;
+    text-align: center;
+}
+
+.container {
+    width: 1110px !important;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    font-size: 13px;
+    padding: 5px;
+}
+
+form {
+    width: 500px;
+    margin-left: 100px;
+}
+#reg{
+    margin-left: 225px;
+    width: 220px;
+}
+.img {
+    width: 385px;
+    float: left;
+    margin-right: 15px;
+}
+.img_t{
+    width: 550px;
+}
+#kolvo_prod{
+    width: 90px;
+}
+#kolvo_prod_form {
+    width: 102px;
+    margin-left: 388px;
+}
