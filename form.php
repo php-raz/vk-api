@@ -18,28 +18,33 @@
             <div class="content col-md-10">
                 <p class="lead">Отправка изображения на стену vk</p>
 
-                <p>Перед отправкой изображений на стену vk Вы должны ввести <strong>access_token</strong> и <strong>user_id</strong>.
-                </p>
-                <small><a href="http://zenno.pro/kak-poluchit-access-token-prilozheniya-vk-com/" target="_blank">Как
-                        получить access token приложения vk.com</a></small>
+                <?php
 
-                <form action="form.php" method="post">
+if ((!empty($_POST['token']) && isset($_POST['token'])) &&
+  (!empty($_POST['id']) && isset($_POST['id']))
+) {
+  $_SESSION['token'] = $_POST['token'];
+  $_SESSION['id'] = $_POST['id'];
+}
+?>
+
+                <form action="load.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="token">Access token</label>
-                        <input type="text" name="token" required class="form-control" id="token"
-                               placeholder="Введите access token">
+                        <label for="photo">Загрузить картинку</label>
+                        <input type="file" name="photo" required class="form-control" id="photo"
+                               placeholder="Загрузить картинку">
                     </div>
                     <div class="form-group">
-                        <label for="id">User id</label>
-                        <input type="text" name="id" required class="form-control" id="id"
-                               placeholder="Введите user id">
+                        <label for="msg">Комментарий</label>
+                        <textarea name="msg" required class="form-control" id="msg"
+                                  placeholder="Введите комментарий к картинке"></textarea>
                     </div>
                     <div class="form-group ">
-                        <input type="submit" value="Сохранить" name="save_token_id"
-                               class="btn btn-success pull-right">
+                        <input type="submit" value="Загрузить" name="load_img" class="btn btn-success pull-right">
                     </div>
                 </form>
 
+                <a href="index.php">Изменить access_token или user_id</a>
             </div>
         </div>
     </div>
