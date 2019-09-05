@@ -61,7 +61,6 @@ class Vk_Upload_Img {
     ));
 
     echo "<pre>";
-    // print_r($photo->response[0]->id);exit;
 
     if (isset($photo->response[0]->id)) {
       return $photo->response[0]->id;
